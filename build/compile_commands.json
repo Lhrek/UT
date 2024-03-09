@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/gzj/CSdiy/UT/build",
+  "command": "/usr/bin/clang++-16  -I/home/gzj/CSdiy/UT/include -g -o CMakeFiles/UT.dir/src/UTmain.cpp.o -c /home/gzj/CSdiy/UT/src/UTmain.cpp",
+  "file": "/home/gzj/CSdiy/UT/src/UTmain.cpp"
+},
+{
+  "directory": "/home/gzj/CSdiy/UT/build",
+  "command": "/usr/bin/clang++-16   -g -std=gnu++14 -o CMakeFiles/tests.dir/tests/test_main.cpp.o -c /home/gzj/CSdiy/UT/tests/test_main.cpp",
+  "file": "/home/gzj/CSdiy/UT/tests/test_main.cpp"
+}
+]

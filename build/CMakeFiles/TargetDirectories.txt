@@ -1,0 +1,5 @@
+/home/gzj/CSdiy/UT/build/CMakeFiles/UT.dir
+/home/gzj/CSdiy/UT/build/CMakeFiles/tests.dir
+/home/gzj/CSdiy/UT/build/CMakeFiles/test.dir
+/home/gzj/CSdiy/UT/build/CMakeFiles/edit_cache.dir
+/home/gzj/CSdiy/UT/build/CMakeFiles/rebuild_cache.dir

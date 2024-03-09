@@ -1,0 +1,1 @@
+/usr/bin/clang++-16 -g CMakeFiles/UT.dir/src/UTmain.cpp.o -o UT 
