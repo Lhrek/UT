@@ -22,7 +22,7 @@ TEST(StringTest, xxx) {
   EXPECT_EQ(changBlank(str), "hello%20world");
 }
 
-TEST(SildingWindow,xxx){
+TEST(SildingWindow,lengthOfLongestSubstring){
   string str1 = "abcda";
   string str2 = "ababcdaefghijk";
   string str3 = "abcabcbb";
