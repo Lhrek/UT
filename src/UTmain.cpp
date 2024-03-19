@@ -1,6 +1,6 @@
-#include "array_.h"
-#include "header.h"
-#include "string_.h"
+#include "/Users/hrek/SE/UT/include/array_.h"
+#include "/Users/hrek/SE/UT/include/header.h"
+#include "/Users/hrek/SE/UT/include/string_.h"
 
 int lengthOfLongestSubstring(string s) {
   int res = 0;
