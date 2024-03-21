@@ -24,9 +24,9 @@ TEST(StringTest, xxx) {
 
 TEST(SildingWindow,lengthOfLongestSubstring){
   string str1 = "abcda";
-  string str2 = "ababcdaefghijk";
+  string str2 = "pwwkew";
   string str3 = "abcabcbb";
-  // EXPECT_EQ(lengthOfLongestSubstring(str1),4);
-  // EXPECT_EQ(lengthOfLongestSubstring(str2),11);
+  EXPECT_EQ(lengthOfLongestSubstring(str1),4);
+  EXPECT_EQ(lengthOfLongestSubstring(str2),3);
   EXPECT_EQ(lengthOfLongestSubstring(str3),3);
   }
