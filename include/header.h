@@ -6,6 +6,7 @@
 #include <string>
 #include <sstream>
 #include <algorithm>
+#include <unordered_set>
 
 using std::string;
 using std::vector;
