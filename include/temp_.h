@@ -26,13 +26,18 @@ vector<vector<int>> threeSum(vector<int> &nums) {
   return res;
 }
 
-
-
-
-
 /*2024.3.27 lc53*/
-    int maxSubArray(vector<int>& nums) {
-
+//暴力 超时
+int maxSubArray(vector<int> &nums) {
+    int MaxSum = -INT_MAX;
+    for (int i = 0; i < nums.size(); i++) {
+        int temp_sum = 0;
+        for (int j = i; j < nums.size(); j++) {
+            temp_sum += nums[j];
+            MaxSum = std::max(MaxSum, temp_sum);
+        }
     }
+    return MaxSum;
+}
 
 #endif

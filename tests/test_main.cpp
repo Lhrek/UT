@@ -1,6 +1,7 @@
 #include "../include/array_.h"
 #include "../include/string_.h"
 #include "../include/sliding_window_.h"
+#include "../include/temp_.h"
 #include <gtest/gtest.h>
 
 TEST(ArrayTest, xxx) {
@@ -30,3 +31,8 @@ TEST(SildingWindow,lengthOfLongestSubstring){
   EXPECT_EQ(lengthOfLongestSubstring(str2),3);
   EXPECT_EQ(lengthOfLongestSubstring(str3),3);
   }
+  
+TEST(Temp,maxSubArray){
+  vector<int> vec{-2,1,-3,4,-1,2,1,-5,4};
+  EXPECT_EQ(maxSubArray(vec),6);
+}
