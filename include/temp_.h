@@ -54,4 +54,12 @@ int maxSubArray(vector<int> &nums) {
   return *max_element(dp.begin(), dp.end());
 }
 
+
+
+
+/*2024.3.29 手撕快排序*/
+vector<int> quickSort(vector<int> &nums) {
+    
+}
+
 #endif
