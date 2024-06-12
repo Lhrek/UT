@@ -59,7 +59,7 @@ int maxSubArray(vector<int> &nums) {
 
 /*2024.3.29 手撕快排序*/
 vector<int> quickSort(vector<int> &nums) {
-    
+  ; 
 }
 
 #endif
