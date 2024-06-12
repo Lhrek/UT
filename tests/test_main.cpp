@@ -1,5 +1,5 @@
 #include "../include/array_.h"
-#include "../include/bfs_.h"
+#include "../include/dfs_.h"
 #include "../include/sliding_window_.h"
 #include "../include/string_.h"
 #include "../include/temp_.h"
@@ -38,7 +38,7 @@ TEST(Temp, maxSubArray) {
   EXPECT_EQ(maxSubArray(vec), 6);
 }
 
-TEST(BFS, xxx) {
+TEST(DFS, xxx) {
 vector<vector<char>> grid1 = {
     {'1', '1', '1', '1', '0'},
     {'1', '1', '0', '1', '0'},
@@ -52,6 +52,6 @@ vector<vector<char>> grid2 = {
     {'0', '0', '0', '1', '1'}
 };
   EXPECT_EQ(numIslands(grid1), 1);
-  EXPECT_EQ(numIslands(grid2), 3);
+  EXPECT_EQ(numIslands(grid2), 4);
 
 }
