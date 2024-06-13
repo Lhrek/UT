@@ -88,10 +88,6 @@
 #include <unordered_set>
 #endif
 
-using std::string;
-using std::vector;
-using std::cin;
-using std::cout;
-using std::endl;
+using namespace std;
 
 #endif

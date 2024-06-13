@@ -7,12 +7,5 @@
 
 
 int main() {
-  string S = "abcabcbb";
-  vector<int> s = {-1,0,1,2,-1,-4};
-    for (const auto &triple : threeSum(s)) {
-        for (int num : triple) {
-            std::cout << num << " ";
-        }
-        std::cout << std::endl;
-    }
+    std::cout << "Hello, World!" << std::endl;
 }
