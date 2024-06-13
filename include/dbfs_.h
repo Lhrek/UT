@@ -37,30 +37,55 @@ int numIslands(vector<vector<char>> &grid) {
 }
 
 /*lc279*/
-// 小于根号n的完全平方数
-vector<int> getSquaresEdge(int n) {
-  vector<int> ans;
-  int i = 1;
-  while (i * i <= n) {
-    ans.push_back(i * i);
-    i++;
-  }
-  return ans;
-}
-int numSquares(int n) { 
-    vector<int> squares = getSquaresEdge(n);
-    queue<pair<int, int>> q; 
-    q.push(make_pair(0, 0)); 
-    while(!q.empty()){
-      pair<int,int> cur = q.front();
-      q.pop();
-      if(cur.first == n) return cur.second;
-      for(int i = 0; i < squares.size(); i++){
-          q.push(make_pair(cur.first + squares[i], cur.second + 1));
-      }
+// int numSquares(int n) {
+//   std::vector<int> squares;
+//   for (int i = 1; i * i <= n; i++) {
+//     squares.push_back(i * i);
+//   }
+//   queue<pair<int, int>> q;
+//   set<int> visited;
+//   q.push(make_pair(0, 0));
+//   while (!q.empty()) {
+//     pair<int, int> cur = q.front();
+//     q.pop();
+//     if (cur.first == n)
+//       return cur.second;
+//     visited.insert(cur.first);
+//     for (int i = 0; i < squares.size(); i++) {
+//       if (visited.find(cur.first + squares[i]) != visited.end() ||
+//           (cur.first + squares[i] > n))
+//         continue;
+//       q.push(make_pair(cur.first + squares[i], cur.second + 1));
+//     }
+//   }
+//   return -1;
+// }
+/*lc279 O(N∗Sqrt(N)) */
+int numSquares(int n) {
+    std::vector<int> squares;
+    for (int i = 1; i * i <= n; i++) {
+        squares.push_back(i * i);
+    }
+
+    std::vector<bool> visited(n + 1, false);
+    std::queue<std::pair<int, int>> q;
+    q.push({0, 0});
+
+    while (!q.empty()) {
+        auto [curSum, steps] = q.front();
+        q.pop();
+
+        for (int square : squares) {
+            int nextSum = curSum + square;
+            if (nextSum == n) return steps + 1;
+            if (nextSum > n) break;
+            if (!visited[nextSum]) {
+                visited[nextSum] = true;
+                q.push({nextSum, steps + 1});
+            }
+        }
     }
     return -1;
 }
-
 
 #endif
