@@ -55,3 +55,19 @@ vector<vector<char>> grid2 = {
   EXPECT_EQ(numIslands(grid2), 4);
 
 }
+
+TEST(lc279_numSquares,xxx){
+  vector<int> ans1 = {1,4,9};
+  vector<int> ans2 = {1};
+  vector<int> ans3 ={};
+  EXPECT_EQ(getSquaresEdge(12),ans1);
+  EXPECT_EQ(getSquaresEdge(9),ans1);
+  EXPECT_EQ(getSquaresEdge(1),ans2);
+  EXPECT_EQ(getSquaresEdge(0),ans3);
+  EXPECT_EQ(numSquares(12),3);
+  EXPECT_EQ(numSquares(1),1);
+  EXPECT_EQ(numSquares(13),2);
+  EXPECT_EQ(numSquares(7168),4);
+
+  
+}

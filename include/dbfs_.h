@@ -37,8 +37,30 @@ int numIslands(vector<vector<char>> &grid) {
 }
 
 /*lc279*/
-int numSquares(int n) {
-    
+// 小于根号n的完全平方数
+vector<int> getSquaresEdge(int n) {
+  vector<int> ans;
+  int i = 1;
+  while (i * i <= n) {
+    ans.push_back(i * i);
+    i++;
+  }
+  return ans;
 }
+int numSquares(int n) { 
+    vector<int> squares = getSquaresEdge(n);
+    queue<pair<int, int>> q; 
+    q.push(make_pair(0, 0)); 
+    while(!q.empty()){
+      pair<int,int> cur = q.front();
+      q.pop();
+      if(cur.first == n) return cur.second;
+      for(int i = 0; i < squares.size(); i++){
+          q.push(make_pair(cur.first + squares[i], cur.second + 1));
+      }
+    }
+    return -1;
+}
+
 
 #endif
