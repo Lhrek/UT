@@ -100,6 +100,19 @@ int numSquares(int n) {
 8 tuv
 9 wxyz
 */
-vector<string> letterCombinations(string digits) {}
+vector<string> letterCombinations(string digits) {
+  if (digits.empty())
+    return {};
+  vector<string> ans;
+  vector<string> table = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs",
+                          "tuv", "wxyz"};
+  for(int i = 0; i < digits.size(); i++){
+    int temp = digits[i] - '0';
+    string tab = table[temp];
+    for(int j =0;j<tab.size();j++){
+      ;
+    }
+  } 
+}
 
 #endif

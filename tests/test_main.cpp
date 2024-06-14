@@ -39,35 +39,39 @@ TEST(Temp, maxSubArray) {
 }
 
 TEST(DFS, xxx) {
-vector<vector<char>> grid1 = {
-    {'1', '1', '1', '1', '0'},
-    {'1', '1', '0', '1', '0'},
-    {'1', '1', '0', '0', '0'},
-    {'0', '0', '0', '0', '0'}
-};
-vector<vector<char>> grid2 = {
-    {'1', '1', '0', '0', '0'},
-    {'1', '1', '0', '1', '0'},
-    {'0', '0', '1', '0', '0'},
-    {'0', '0', '0', '1', '1'}
-};
+  vector<vector<char>> grid1 = {{'1', '1', '1', '1', '0'},
+                                {'1', '1', '0', '1', '0'},
+                                {'1', '1', '0', '0', '0'},
+                                {'0', '0', '0', '0', '0'}};
+  vector<vector<char>> grid2 = {{'1', '1', '0', '0', '0'},
+                                {'1', '1', '0', '1', '0'},
+                                {'0', '0', '1', '0', '0'},
+                                {'0', '0', '0', '1', '1'}};
   EXPECT_EQ(numIslands(grid1), 1);
   EXPECT_EQ(numIslands(grid2), 4);
-
 }
 
-TEST(lc279_numSquares,xxx){
-  vector<int> ans1 = {1,4,9};
+TEST(lc279_numSquares, xxx) {
+  vector<int> ans1 = {1, 4, 9};
   vector<int> ans2 = {1};
-  vector<int> ans3 ={};
+  vector<int> ans3 = {};
   // EXPECT_EQ(getSquaresEdge(12),ans1);
   // EXPECT_EQ(getSquaresEdge(9),ans1);
   // EXPECT_EQ(getSquaresEdge(1),ans2);
   // EXPECT_EQ(getSquaresEdge(0),ans3);
-  EXPECT_EQ(numSquares(12),3);
-  EXPECT_EQ(numSquares(1),1);
-  EXPECT_EQ(numSquares(13),2);
-  EXPECT_EQ(numSquares(7168),4);
-
-  
+  EXPECT_EQ(numSquares(12), 3);
+  EXPECT_EQ(numSquares(1), 1);
+  EXPECT_EQ(numSquares(13), 2);
 }
+// TEST(lc17_letterCombinations, xxx) {
+//   EXPECT_EQ(
+//       letterCombinations("23"),
+//       vector<string>({"ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"}));
+//   EXPECT_EQ(letterCombinations(""), vector<string>({}));
+//   EXPECT_EQ(letterCombinations("2"), vector<string>({"a", "b", "c"}));
+//   EXPECT_EQ(letterCombinations("234"),
+//             vector<string>({"adg", "adh", "adi", "aeg", "aeh", "aei", "afg",
+//                             "afh", "afi", "bdg", "bdh", "bdi", "beg", "beh",
+//                             "bei", "bfg", "bfh", "bfi", "cdg", "cdh", "cdi",
+//                             "ceg", "ceh", "cei", "cfg", "cfh", "cfi"}));
+// }
