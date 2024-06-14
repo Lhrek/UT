@@ -16,6 +16,18 @@ void printLinkedlistFromEnd(ListNode *pNode) {
   cout << pNode->key << endl;
 }
 
-/*LC160 */
+/*141*/
+    bool hasCycle(ListNode *head) {
+        if(head == NULL) return false;
+        auto f1 = head;
+        auto f2 = head->pNext;
+        while(f1 != NULL && f2 != NULL && f2->pNext != NULL){
+          if(f1 == f2)
+            return true;
+          f1 = f1->pNext;
+          f2 = f2->pNext->pNext;
+        }
+        return false;
+    }
 
 #endif
