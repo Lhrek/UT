@@ -62,30 +62,44 @@ int numIslands(vector<vector<char>> &grid) {
 // }
 /*lc279 O(N∗Sqrt(N)) */
 int numSquares(int n) {
-    std::vector<int> squares;
-    for (int i = 1; i * i <= n; i++) {
-        squares.push_back(i * i);
+  std::vector<int> squares;
+  for (int i = 1; i * i <= n; i++) {
+    squares.push_back(i * i);
+  }
+
+  std::vector<bool> visited(n + 1, false);
+  std::queue<std::pair<int, int>> q;
+  q.push({0, 0});
+
+  while (!q.empty()) {
+    auto [curSum, steps] = q.front();
+    q.pop();
+
+    for (int square : squares) {
+      int nextSum = curSum + square;
+      if (nextSum == n)
+        return steps + 1;
+      if (nextSum > n)
+        break;
+      if (!visited[nextSum]) {
+        visited[nextSum] = true;
+        q.push({nextSum, steps + 1});
+      }
     }
-
-    std::vector<bool> visited(n + 1, false);
-    std::queue<std::pair<int, int>> q;
-    q.push({0, 0});
-
-    while (!q.empty()) {
-        auto [curSum, steps] = q.front();
-        q.pop();
-
-        for (int square : squares) {
-            int nextSum = curSum + square;
-            if (nextSum == n) return steps + 1;
-            if (nextSum > n) break;
-            if (!visited[nextSum]) {
-                visited[nextSum] = true;
-                q.push({nextSum, steps + 1});
-            }
-        }
-    }
-    return -1;
+  }
+  return -1;
 }
+
+/*lc17
+2 abc
+3 def
+4 ghi
+5 jkl
+6 mno
+7 pqrs
+8 tuv
+9 wxyz
+*/
+vector<string> letterCombinations(string digits) {}
 
 #endif
