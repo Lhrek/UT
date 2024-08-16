@@ -3,8 +3,8 @@
 
 #include "header.h"
 //lc10
-bool isMatch(string s, string p) {
+// bool isMatch(string s, string p) {
 
-}
+// }
 
 #endif
